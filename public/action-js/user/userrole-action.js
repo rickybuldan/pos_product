@@ -375,11 +375,11 @@ function loadRole(rowData, type) {
                         var correspondingRole = ArrCheckPermission.find(function (
                             role
                         ) {
-                            return role.role_id === item.id;
+                            return role.role_id == item.id;
                         });
 
                         // Jika ditemukan peran yang sesuai dan i_view adalah 1, maka isChecked pada correspondingRole menjadi 1, jika tidak, isChecked menjadi 0
-                        if (correspondingRole && correspondingRole.i_view === 1) {
+                        if (correspondingRole && correspondingRole.i_view == 1) {
                             item.isChecked = 1;
                         } else {
                             item.isChecked = 0;
